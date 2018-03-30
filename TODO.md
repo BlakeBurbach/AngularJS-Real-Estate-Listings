@@ -40,4 +40,19 @@ TO DO List
                 - [x] vendors folder:
                     - [x] angular
                     - [x] angular-route
+
+- [] HTML setup 
+    - [] source in vendors and js client, controllers, and services
+    - [] create html structure with ng-app, ng-include, ng-view
+    - [] create the views - purchase and rental html structures
+    - [] create nav.html structures in templates
+
+- [] JS setup
+    - [] create the ListingsApp in client.js
+        - [] setup the $routeProvider in client
+    - [] setup the controller structures for purchase and rental
+        - [] create the connections between views and service
+    - [] setup the ListingService structure in services
+        - [] create the functions for POST and GET
+    
                 
