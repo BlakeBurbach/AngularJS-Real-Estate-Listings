@@ -6,37 +6,38 @@ TO DO List
          listings.sql   
     
 - npm init
-    - [] npm install express
-    - [] install body-parser
-    - [] install angular
-    - [] install angular-route
-    - [] install pg
+    - [x] npm install express
+    - [x] install body-parser
+    - [x] install angular
+    - [x] install angular-route
+    - [x] install pg
 
 - setup folder hierarchy
-    - [] create folder 'server'
-        - [] inside 'server' folder:
-            - [] server.js file
-            - [] routes folder
-                - [] listings.routes.js
-            - [] modules folder:
-                - [] pool.js
-            - [] public folder:
-                - [] index.html
-                - [] views folder:
-                    - [] purchase.html
-                    - [] rental.html
-                    - [] template folder:
-                        - [] nav.html
-                - [] scripts folder:
-                    - [] client.js
-                    - [] controller folder:
-                        - [] rental.controller.js
-                        - [] purchase.controller.js
-                    - [] services folder:
-                        - [] realEstate.service.js
-                - [] styles folder:
-                    - [] styles.css
-                - [] vendors folder:
-                    - [] angular
-                    - [] angular-route
+    - [x] create gitignore
+    - [x] create folder 'server'
+        - [x] inside 'server' folder:
+            - [x] server.js file
+            - [x] routes folder
+                - [x] listings.routes.js
+            - [x] modules folder:
+                - [x] pool.js
+            - [x] public folder:
+                - [x] index.html
+                - [x] views folder:
+                    - [x] purchase.html
+                    - [x] rental.html
+                    - [x] template folder:
+                        - [x] nav.html
+                - [x] scripts folder:
+                    - [x] client.js
+                    - [x] controller folder:
+                        - [x] rental.controller.js
+                        - [x] purchase.controller.js
+                    - [x] services folder:
+                        - [x] realEstate.service.js
+                - [x] styles folder:
+                    - [x] styles.css
+                - [x] vendors folder:
+                    - [x] angular
+                    - [x] angular-route
                 
