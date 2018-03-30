@@ -1,0 +1,36 @@
+<section>
+  <table>
+      <thead>
+          <tr>
+              <th>
+                  Cost
+              </th>
+              <th>
+                  Square Feet
+              </th>
+              <th>
+                  Type
+              </th>
+              <th>
+                  City
+              </th>
+          </tr>
+      </thead>
+      <tbody ng-repeat="listing in vm.listingsArray">
+            <tr>
+                <td>
+                    {{listing.cost}}
+                </td>
+                <td>
+                    {{listing.sqft}}
+                </td>
+                <td>
+                    {{listing.type}}
+                </td>
+                <td>
+                    {{listing.city}}
+                </td>
+            </tr>
+      </tbody>
+  </table>
+</section>
