@@ -1,8 +1,8 @@
 TO DO List
 
 - Database 
-    - [] Create the database "listings" in postico
-    - [] create the table "listings" and populate with the data from 
+    - [x] Create the database "listings" in postico
+    - [x] create the table "listings" and populate with the data from 
          listings.sql   
     
 - npm init
