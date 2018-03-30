@@ -2,7 +2,7 @@
 const pg = require('pg');
 const Pool = pg.Pool;
 const config = {
-  database: 'cats', //name of database
+  database: 'listings', //name of database
   host: 'localhost',
   port: 5432, //default for postgres
   max: 10, //Max connections to DB
@@ -12,7 +12,7 @@ const config = {
 const pool = new Pool(config);
 
 pool.on('connect', (client) => {
-  console.log('posgresql connected!');
+  console.log('postgresql connected!');
 });
 
 pool.on('error', (err, client) => {
