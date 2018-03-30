@@ -41,18 +41,18 @@ TO DO List
                     - [x] angular
                     - [x] angular-route
 
-- [] HTML setup 
-    - [] source in vendors and js client, controllers, and services
-    - [] create html structure with ng-app, ng-include, ng-view
-    - [] create the views - purchase and rental html structures
-    - [] create nav.html structures in templates
+- [x] HTML setup 
+    - [x] source in vendors and js client, controllers, and services
+    - [x] create html structure with ng-app, ng-include, ng-view
+    - [x] create the views - purchase and rental html structures
+    - [x] create nav.html structures in templates
 
-- [] JS setup
-    - [] create the ListingsApp in client.js
-        - [] setup the $routeProvider in client
-    - [] setup the controller structures for purchase and rental
+- [x] JS setup
+    - [x] create the ListingsApp in client.js
+        - [x] setup the $routeProvider in client
+    - [x] setup the controller structures for purchase and rental
         - [] create the connections between views and service
-    - [] setup the ListingService structure in services
+    - [x] setup the ListingService structure in services
         - [] create the functions for POST and GET
     
                 
