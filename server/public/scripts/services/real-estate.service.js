@@ -5,7 +5,7 @@ ListingsApp.service('RealEstateService', ['$http', function($http){
     self.purchaseListings = { list: [] }; 
 
     self.getPurchaseListings = function(){
-        $http.get('/listings').then(function(response){
+        $http.get('/listings/purchases').then(function(response){
             console.log('getPurchaseListings success', response);
             self.purchaseListings.list = response.data;
         }).catch(function(error){
@@ -17,7 +17,7 @@ ListingsApp.service('RealEstateService', ['$http', function($http){
     self.rentalListings = { list: [] };
 
     self.getRentalListings = function(){
-        $http.get('/listings').then(function(response){
+        $http.get('/listings/rentals').then(function(response){
             console.log('getRentalListings success', response);
             self.rentalListings.list = response.data;
         }).catch(function(error){

@@ -4,8 +4,8 @@ ListingsApp.controller('PurchaseController', ['RealEstateService', function(Real
 
     let listingService = RealEstateService;
 
-    self.getListings = listingService.getListings;
-    self.getListings();
+    self.getPurchaseListings = listingService.getPurchaseListings;
+    self.getPurchaseListings();
 
-    self.listingsArray = listingService.listingsArray;
+    self.purchaseListings = listingService.purchaseListings;
 }]);

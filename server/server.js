@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 const rentalRouter = require('./routes/rental.router.js');
 const purchaseRouter = require('./routes/purchase.router.js');
 
-app.use('/listings', rentalRouter);
-app.use('/listings', purchaseRouter);
+app.use('/listings/rentals', rentalRouter);
+app.use('/listings/purchases', purchaseRouter);
 
 app.use(express.static('server/public'));
 
