@@ -1,6 +1,6 @@
 TO DO List
 
-- Database 
+- Initial Database setup
     - [x] Create the database "listings" in postico
     - [x] create the table "listings" and populate with the data from 
          listings.sql   
@@ -41,18 +41,21 @@ TO DO List
                     - [x] angular
                     - [x] angular-route
 
-- [x] HTML setup 
+- [x] Initial HTML setup 
     - [x] source in vendors and js client, controllers, and services
     - [x] create html structure with ng-app, ng-include, ng-view
     - [x] create the views - purchase and rental html structures
     - [x] create nav.html structures in templates
 
-- [x] JS setup
+- [x] Initial JS setup
     - [x] create the ListingsApp in client.js
         - [x] setup the $routeProvider in client
     - [x] setup the controller structures for purchase and rental
         - [] create the connections between views and service
     - [x] setup the ListingService structure in services
         - [] create the functions for POST and GET
+
+- [] get the server side up and running
+
     
                 
