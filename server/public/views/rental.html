@@ -1,5 +1,17 @@
 <section>
         <h2>Rental Listings</h2>
+        <section>
+                <h3>Add Your Rental Listing</h3>
+                <div>
+                    <input type="number" ng-model="vm.newRentalListing.cost" placeholder="Cost">
+                    <input type="number" ng-model="vm.newRentalListing.sqft" placeholder="Square Feet">
+                    <input type="text" ng-model="vm.newRentalListing.type" placeholder="Type of Listing">
+                    <input type="text" ng-model="vm.newRentalListing.city" placeholder="City">
+                    <button ng-click="vm.addRentalListing(vm.newRentalListing)">
+                        Add Listing
+                    </button>
+                </div>
+            </section>
       <table>
           <thead>
               <tr>
