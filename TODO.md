@@ -68,7 +68,7 @@ TO DO List
     
                                             HARD MODE
 
-- [] create a DELETE route in client and server
+- [x] create a DELETE route in client and server
     - client-side:
         - add a delete button on every listing on html
         - add a DELETE function in service
