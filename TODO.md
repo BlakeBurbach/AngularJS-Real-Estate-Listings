@@ -95,6 +95,12 @@ TO DO List
     - database: 
         - delete both 'purchase' and 'rental' tables and combined into one 'listings' table.
 
+- [x] Create a radial button option for type of listing - rental or sale
+    - html: 
+        - For the type of listing input:
+        - create a select element with the ng-model for type
+        - the option values will be: rent and sale
+
                                             STRETCH GOALS
 
 - 
