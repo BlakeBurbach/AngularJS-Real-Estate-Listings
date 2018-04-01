@@ -1,61 +1,69 @@
 TO DO List
 
-- Initial Database setup
-    - [x] Create the database "listings" in postico
-    - [x] create the table "listings" and populate with the data from 
-         listings.sql   
+- [x] Initial Database setup
+    - Create the database "listings" in postico
+    - create two tables "rentals" and "purchases" and populate with the data from 
+      listings.sql   
     
-- npm init
-    - [x] npm install express
-    - [x] install body-parser
-    - [x] install angular
-    - [x] install angular-route
-    - [x] install pg
+- [x] npm init
+    - npm install express
+    - install body-parser
+    - install angular
+    - install angular-route
+    - install pg
 
-- setup folder hierarchy
-    - [x] create gitignore
-    - [x] create folder 'server'
-        - [x] inside 'server' folder:
-            - [x] server.js file
-            - [x] routes folder
-                - [x] listings.routes.js
-            - [x] modules folder:
-                - [x] pool.js
-            - [x] public folder:
-                - [x] index.html
-                - [x] views folder:
-                    - [x] purchase.html
-                    - [x] rental.html
-                    - [x] template folder:
-                        - [x] nav.html
-                - [x] scripts folder:
-                    - [x] client.js
-                    - [x] controller folder:
-                        - [x] rental.controller.js
-                        - [x] purchase.controller.js
-                    - [x] services folder:
-                        - [x] realEstate.service.js
-                - [x] styles folder:
-                    - [x] styles.css
-                - [x] vendors folder:
-                    - [x] angular
-                    - [x] angular-route
+- [x] setup folder hierarchy
+    - for server 
+        - server.js, routes, modules
+    - for public
+        - html: index, views, templates
+        - scripts:client, controllers, and services
+        - css
+        - vendors
 
 - [x] Initial HTML setup 
-    - [x] source in vendors and js client, controllers, and services
-    - [x] create html structure with ng-app, ng-include, ng-view
-    - [x] create the views - purchase and rental html structures
-    - [x] create nav.html structures in templates
+    - source in vendors and js client, controllers, and services
+    - create html structure with ng-app, ng-include, ng-view
+    - create the views - purchase and rental html structures
+    - create nav.html structures in templates
 
 - [x] Initial JS setup
-    - [x] create the ListingsApp in client.js
-        - [x] setup the $routeProvider in client
-    - [x] setup the controller structures for purchase and rental
-        - [] create the connections between views and service
-    - [x] setup the ListingService structure in services
-        - [] create the functions for POST and GET
+    - create the ListingsApp in client.js
+        - setup the $routeProvider in client
+    - setup the controller structures for purchase and rental
+        - create the connections between views and service
+    - setup the ListingService structure in services
+        - create the functions for GET
 
-- [] get the server side up and running
+- [x] get the server side up and running
+    - bring in express, body-parser, setup PORT, and routes to database
+    - create a pool.js to setup a connection to Postico postgreSQL database
+    - setup a router for rental
+    - setup a router for purchases
+    - create a GET request to SQL database to retrieve listing info
+         from both rental and purchases
+    - send back listing info from database to client
 
+- [x] database
+    - create a 'listings' database. 
+        - create two tables 
+            - purchases - with all 'sale' listings
+            - rentals - with all 'rent' listings
+
+- [x] on the client side 
+    - Create two separate get functions:
+        - one for all 'sale' listings
+        - one for all 'rent' listings
+    - send to respective htmls and display listings
+
+- [] create POST requests to allow a user to create listings of their own
+    - client-side:
+        - inputs and a button on both 'for sale' and 'for rent' htmls 
+        - two post requests in real-estate.service
+            - one for puchases and one for rentals
+
+    - server-side: 
+        - in both routers, a POST to send user's listing info to database
+        - the GET functions will then send back to client to display on DOM
     
                 
