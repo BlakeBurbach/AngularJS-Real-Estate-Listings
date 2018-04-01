@@ -7,15 +7,15 @@ ListingsApp.controller('RentalController', ['RealEstateService', function(RealEs
     let listingService = RealEstateService;
 
     // connect to the GET function for rental listings
-    self.getRentalListings = listingService.getRentalListings;
-    self.getRentalListings();// display the listings upon page load
+    self.getListings = listingService.getListings;
+    self.getListings();// display the listings upon page load
 
     // the rental listing results from database
-    self.rentalListings = listingService.rentalListings;
+    self.allListings = listingService.allListings;
 
     // connect inputs to POST function to send users new listing
-    self.addRentalListing = listingService.addRentalListing;
+    self.addListing = listingService.addListing;
 
     // connect delete button to DELETE function to delete from database
-    self.removeRentalListing = listingService.removeRentalListing;
+    self.removeListing = listingService.removeListing;
 }]);

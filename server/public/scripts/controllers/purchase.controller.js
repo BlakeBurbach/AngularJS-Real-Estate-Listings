@@ -7,14 +7,14 @@ ListingsApp.controller('PurchaseController', ['RealEstateService', function(Real
     let listingService = RealEstateService;
 
     // connect to the GET function for purchase listings
-    self.getPurchaseListings = listingService.getPurchaseListings;
-    self.getPurchaseListings(); // display the listings upon page load
+    self.getListings = listingService.getListings;
+    self.getListings(); // display the listings upon page load
     // the purchase listing results from database
-    self.purchaseListings = listingService.purchaseListings;
+    self.allListings = listingService.allListings;
 
     // connect inputs to POST function to send users new listing
-    self.addPurchaseListing = listingService.addPurchaseListing;
+    self.addListing = listingService.addListing;
 
     // connect delete button to DELETE function to delete from database
-    self.removePurchaseListing = listingService.removePurchaseListing;
+    self.removeListing = listingService.removeListing;
 }]);

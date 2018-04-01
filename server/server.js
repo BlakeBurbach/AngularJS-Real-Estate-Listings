@@ -6,11 +6,9 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const rentalRouter = require('./routes/rental.router.js');
-const purchaseRouter = require('./routes/purchase.router.js');
+const listingRouter = require('./routes/listing.router.js');
 
-app.use('/listings/rentals', rentalRouter);
-app.use('/listings/purchases', purchaseRouter);
+app.use('/listings', listingRouter);
 
 app.use(express.static('server/public'));
 
