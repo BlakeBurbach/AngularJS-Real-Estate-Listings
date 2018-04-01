@@ -77,6 +77,24 @@ TO DO List
         - create a DELETE route to delete listing from database
 
 
+
+- [x] DO A COMPLETE OVERHAUL OF DATABASE TO BE ONE TABLE INSTEAD OF TWO
+    - client side: 
+        - html: 
+            - Put a filter on the ng-repeats to filter by type of listing - sale or rent.
+        - scripts:
+            - Combined all of the service and controller functions to be one route per http function for both
+              rental and sale information instead of two per http function.
+    
+    - server-side:
+        - serverjs:
+            - combined the router paths into one router.
+        - routers:
+            - deleted one router and combined into one complete 'listing' router.
+        
+    - database: 
+        - delete both 'purchase' and 'rental' tables and combined into one 'listings' table.
+
                                             STRETCH GOALS
 
 - 
