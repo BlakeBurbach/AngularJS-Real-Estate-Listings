@@ -17,4 +17,5 @@ ListingsApp.controller('PurchaseController', ['RealEstateService', function(Real
 
     // connect delete button to DELETE function to delete from database
     self.removeListing = listingService.removeListing;
+
 }]);

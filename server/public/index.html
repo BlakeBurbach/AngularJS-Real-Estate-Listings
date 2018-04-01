@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- Angular and Angular Routes -->
     <script src="vendors/angular.js"></script>
     <script src="vendors/angular-route.js"></script>
      <!-- Angular Material -->
      <link href="vendors/angular-material.css" rel="stylesheet" type="text/css">
-     <script src="vendors/angular-animate.min.js" charset="utf-8"></script>
-     <script src="vendors/angular-aria.min.js" charset="utf-8"></script>
+     <script src="vendors/angular-animate.js" charset="utf-8"></script>
+     <script src="vendors/angular-aria.js" charset="utf-8"></script>
      <!-- <script src="vendors/angular-messages.min.js" charset="utf-8"></script> -->
-     <script src="vendors/angular-material.min.js" charset="utf-8"></script>
+     <script src="vendors/angular-material.js" charset="utf-8"></script>
     <!-- Sweetalert -->
     <script src="vendors/sweetalert.min.js"></script>
     <!-- Javascript client, services, and controllers -->
@@ -23,14 +20,18 @@
     <script src="scripts/services/real-estate.service.js"></script>
     <script src="scripts/controllers/purchase.controller.js"></script>
     <script src="scripts/controllers/rental.controller.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <title>Real Estate Listings App</title>
 </head>
-<body ng-app="ListingsApp">
-    <h1>Real Estate Listings App</h1>
-    <div ng-include=" '/views/templates/nav.html' ">
-    </div>
-    <main ng-view>
+<body layout="row" ng-app="ListingsApp" flex>
+    <div layout="column" layout-sm="row" layout-align="center center" layout-wrap flex>
+        <h1>Real Estate Listings App</h1>
+        <div ng-include=" '/views/templates/nav.html' "></div>
+        <main ng-view layout="column" layout-sm="row" layout-align="center center" layout-wrap flex>
         <!-- Purchase and Rental HTML goes here -->
-    </main>
+        </main>
+    </div>
 </body>
 </html>

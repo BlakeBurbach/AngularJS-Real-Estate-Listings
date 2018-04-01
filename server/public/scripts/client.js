@@ -1,7 +1,17 @@
-const ListingsApp = angular.module('ListingsApp', ['ngRoute']);
+const ListingsApp = angular.module('ListingsApp', ['ngRoute', 'ngMaterial']);
+
+ListingsApp.config(function($mdThemingProvider){
+    $mdThemingProvider.theme('default')
+        .primaryPalette('indigo')
+        .accentPalette('pink')
+        .warnPalette('red')
+        .backgroundPalette('grey');
+});
+
 
 ListingsApp.config(function($routeProvider){
     console.log('config loaded');
+
 
     $routeProvider
     .when('/purchase', {
