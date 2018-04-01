@@ -28,11 +28,27 @@ ListingsApp.service('RealEstateService', ['$http', function($http){
 
     // DELETE function to delete purchase listing from database
     self.removeListing = function(listing){
-        $http.delete(`/listings/${listing.id}`).then(function(result){
-            console.log('removeListing DELETE success', result);
-            self.getListings();
-        }).catch(function(error){
-            console.log('removeListing DELETE error', error);
-        }); // end $http DELETE
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((removeListing) => {
+            if (removeListing) {
+              swal("Successfully Removed Listing", {
+                icon: "success",
+              });
+            $http.delete(`/listings/${listing.id}`).then(function(result){
+                console.log('removeListing DELETE success', result);
+                self.getListings();
+            }).catch(function(error){
+                console.log('removeListing DELETE error', error);
+            }); // end $http DELETE
+            } else {
+              swal("Listing Was Not Removed");
+            } // end swal if
+          });
     } // end removeListings
 }]);
