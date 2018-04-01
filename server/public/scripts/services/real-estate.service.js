@@ -41,4 +41,14 @@ ListingsApp.service('RealEstateService', ['$http', function($http){
         }); // end $http
     };// end getRentalListings
     self.getRentalListings(); // call to display on DOM upon page load
+
+    // POST function to send user's listing to server
+    self.addRentalListing = function(newListing){
+        $http.post('/listings/rentals', newListing).then(function(response){
+            console.log('addRentalListing success', response);
+            self.getRentalListings();
+        }).catch(function(error){
+            console.log('addRentalListing error', error);
+        }); // end $http POST
+    } // end addRentalListing
 }]);
