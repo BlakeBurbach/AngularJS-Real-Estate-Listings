@@ -1,28 +1,44 @@
 ListingsApp.service('RealEstateService', ['$http', function($http){
     console.log('RealEstateService is loaded');
+    // allow service a connection to all controllers
     let self = this;
-
-    self.purchaseListings = { list: [] }; 
-
+    // --------------------------------- PurchaseController connections --------------------------------//
+    self.purchaseListings = { list: [] }; // empty object that will hold listing data for DOM
+        // GET function to get purchase listing data from server
     self.getPurchaseListings = function(){
         $http.get('/listings/purchases').then(function(response){
             console.log('getPurchaseListings success', response);
             self.purchaseListings.list = response.data;
+            // set the response data to object array to display on DOM
         }).catch(function(error){
             console.log('getPurchaseListings error', error);
-        });
-    }
-    self.getPurchaseListings();
+        }); // end $http GET
+    }// end getPurchaseListings
+    self.getPurchaseListings(); // call to display on DOM upon page load
 
-    self.rentalListings = { list: [] };
+        // POST function to send user's listing to server
+    self.addPurchaseListing = function(newListing){
+        $http.post('/listings/purchases', newListing).then(function(response){
+            console.log('addPurchaseListing success', response);
+            self.getPurchaseListings();
+        }).catch(function(error){
+            console.log('addPurchaseListing error', error);
+        }); // end $http POST
+    } // end addPurchaseListing
 
+
+    // ---------------------------------- RentalController connections ----------------------------------// 
+
+    self.rentalListings = { list: [] }; // empty object to hold listing data for DOM
+        // GET function to get rental listing data from server
     self.getRentalListings = function(){
         $http.get('/listings/rentals').then(function(response){
             console.log('getRentalListings success', response);
+            // set the response data to object array to display on DOM
             self.rentalListings.list = response.data;
         }).catch(function(error){
             console.log('getRentalListings error', error);
-        });
-    };
-    self.getRentalListings();
+        }); // end $http
+    };// end getRentalListings
+    self.getRentalListings(); // call to display on DOM upon page load
 }]);

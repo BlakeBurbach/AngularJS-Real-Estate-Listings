@@ -56,7 +56,7 @@ TO DO List
         - one for all 'rent' listings
     - send to respective htmls and display listings
 
-- [] create POST requests to allow a user to create listings of their own
+- [x] create POST requests to allow a user to create listings of their own
     - client-side:
         - inputs and a button on both 'for sale' and 'for rent' htmls 
         - two post requests in real-estate.service
