@@ -15,4 +15,7 @@ ListingsApp.controller('RentalController', ['RealEstateService', function(RealEs
 
     // connect inputs to POST function to send users new listing
     self.addRentalListing = listingService.addRentalListing;
+
+    // connect delete button to DELETE function to delete from database
+    self.removeRentalListing = listingService.removeRentalListing;
 }]);

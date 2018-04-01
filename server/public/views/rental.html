@@ -27,6 +27,9 @@
                   <th>
                       City
                   </th>
+                  <th>
+                      Remove 
+                  </th>
               </tr>
           </thead>
           <tbody ng-repeat="listing in vm.rentalListings.list">
@@ -42,6 +45,11 @@
                     </td>
                     <td>
                         {{listing.city}}
+                    </td>
+                    <td>
+                        <button ng-click="vm.removeRentalListing(listing)">
+                            Remove Listing
+                        </button>
                     </td>
                 </tr>
           </tbody>

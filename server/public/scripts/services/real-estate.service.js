@@ -61,4 +61,14 @@ ListingsApp.service('RealEstateService', ['$http', function($http){
             console.log('addRentalListing error', error);
         }); // end $http POST
     } // end addRentalListing
+
+    // DELETE function to delete rental listing from database
+    self.removeRentalListing = function(listing){
+        $http.delete(`/listings/rentals/${listing.id}`).then(function(result){
+            console.log('removeRentalListing DELETE success', result);
+            self.getRentalListings();
+        }).catch(function(error){
+            console.log('removeRentalListing DELETE error', error);
+        }); // end $http DELETE
+    } // end removeRentalListings
 }]);

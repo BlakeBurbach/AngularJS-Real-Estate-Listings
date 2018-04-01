@@ -30,4 +30,17 @@ router.post('/', (req, res) => {
     }); // end pool.query
 }); // end router.post
 
+// DELETE function to remove listing from database
+router.delete('/:id', (req, res) => {
+    let listingId = req.params.id;
+    let queryText = `DELETE FROM rentals WHERE id = $1`;
+    pool.query(queryText, [listingId]).then( (response) => {
+        console.log('rental router DELETE success', response);
+        res.sendStatus(200);
+    }).catch( (err) => {
+        console.log('rental router DELETE error', error);
+        res.sendStatus(500);
+    }); // end pool.query
+}); // end router.delete
+
 module.exports = router;
