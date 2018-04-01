@@ -12,7 +12,6 @@ ListingsApp.config(function($mdThemingProvider){
 ListingsApp.config(function($routeProvider){
     console.log('config loaded');
 
-
     $routeProvider
     .when('/purchase', {
         templateUrl: '/views/purchase.html',

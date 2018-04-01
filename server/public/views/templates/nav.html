@@ -1,14 +1,10 @@
 <nav>
-    <md-content>
-        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap flex>
-            <md-list>
-                <md-list-item>
-                    <md-button><a href="/#!/purchase">For Sale Listings</a></md-button>
-                </md-list-item>
-                <md-list-item>
-                    <md-button><a href="/#!/rental">For Rent Listings</a></md-button>
-                </md-list-item>
-            </md-list>
-            </section>
+    <md-content class="md-padding">
+        <md-nav-bar md-no-ink-bar="disableInkBar"
+            md-selected-nav-item="currentNavItem"
+            nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-href="/#!/purchase">For Sale Listings</md-nav-item>
+            <md-nav-item md-nav-href="/#!/rental">Rental Listings</md-nav-item>
+        </md-nav-bar>
     </md-content>
 </nav>
