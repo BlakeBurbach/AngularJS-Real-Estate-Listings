@@ -14,4 +14,7 @@ ListingsApp.controller('PurchaseController', ['RealEstateService', function(Real
 
     // connect inputs to POST function to send users new listing
     self.addPurchaseListing = listingService.addPurchaseListing;
+
+    // connect delete button to DELETE function to delete from database
+    self.removePurchaseListing = listingService.removePurchaseListing;
 }]);

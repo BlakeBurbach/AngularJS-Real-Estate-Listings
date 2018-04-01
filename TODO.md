@@ -1,5 +1,5 @@
 TO DO List
-
+                                            BASE MODE
 - [x] Initial Database setup
     - Create the database "listings" in postico
     - create two tables "rentals" and "purchases" and populate with the data from 
@@ -66,4 +66,12 @@ TO DO List
         - in both routers, a POST to send user's listing info to database
         - the GET functions will then send back to client to display on DOM
     
-                
+                                            HARD MODE
+
+- [] create a DELETE route in client and server
+    - client-side:
+        - add a delete button on every listing on html
+        - add a DELETE function in service
+    
+    - server-side:
+        - create a DELETE route to delete listing from database

@@ -13,7 +13,7 @@ ListingsApp.service('RealEstateService', ['$http', function($http){
         }).catch(function(error){
             console.log('getPurchaseListings error', error);
         }); // end $http GET
-    }// end getPurchaseListings
+    } // end getPurchaseListings
     self.getPurchaseListings(); // call to display on DOM upon page load
 
         // POST function to send user's listing to server
@@ -25,6 +25,16 @@ ListingsApp.service('RealEstateService', ['$http', function($http){
             console.log('addPurchaseListing error', error);
         }); // end $http POST
     } // end addPurchaseListing
+
+    // DELETE function to delete purchase listing from database
+    self.removePurchaseListing = function(listing){
+        $http.delete(`/listings/purchases/${listing.id}`).then(function(result){
+            console.log('removePurchaseListing DELETE success', result);
+            self.getPurchaseListings();
+        }).catch(function(error){
+            console.log('removePurchaseListing DELETE error', error);
+        }); // end $http DELETE
+    } // end removePurchaseListings
 
 
     // ---------------------------------- RentalController connections ----------------------------------// 
