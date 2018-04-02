@@ -103,4 +103,4 @@ TO DO List
 
                                             STRETCH GOALS
 
-- [] Add AngularJS Material Design to the UI
+- [x] Add AngularJS Material Design to the UI
