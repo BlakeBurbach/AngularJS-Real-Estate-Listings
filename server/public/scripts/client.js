@@ -2,10 +2,9 @@ const ListingsApp = angular.module('ListingsApp', ['ngRoute', 'ngMaterial']);
 
 ListingsApp.config(function($mdThemingProvider){
     $mdThemingProvider.theme('default')
-        .primaryPalette('indigo')
+        .primaryPalette('grey')
         .accentPalette('pink')
         .warnPalette('red')
-        .backgroundPalette('grey');
 });
 
 

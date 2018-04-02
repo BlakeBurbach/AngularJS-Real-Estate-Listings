@@ -11,7 +11,7 @@
      <link href="vendors/angular-material.css" rel="stylesheet" type="text/css">
      <script src="vendors/angular-animate.js" charset="utf-8"></script>
      <script src="vendors/angular-aria.js" charset="utf-8"></script>
-     <!-- <script src="vendors/angular-messages.min.js" charset="utf-8"></script> -->
+     <script src="vendors/angular-messages.min.js" charset="utf-8"></script>
      <script src="vendors/angular-material.js" charset="utf-8"></script>
     <!-- Sweetalert -->
     <script src="vendors/sweetalert.min.js"></script>
@@ -26,12 +26,14 @@
     <title>Real Estate Listings App</title>
 </head>
 <body layout="row" ng-app="ListingsApp" flex>
-    <div layout="column" layout-sm="row" layout-align="center center" layout-wrap flex>
-        <div class="md-primary">
-            <h1>Real Estate Listings App</h1>
-        </div>
+    <div layout="column" layout-sm="row" flex>
+        <md-toolbar>
+            <div class="md-primary">
+                <h1>Real Estate Listings App</h1>
+            </div>
+        </md-toolbar>
         <div ng-include=" '/views/templates/nav.html' "></div>
-        <main ng-view layout="column" layout-sm="row" layout-align="center center" layout-wrap flex>
+        <main ng-view layout="column" layout-sm="row" layout-align="center center" flex>
         <!-- Purchase and Rental HTML goes here -->
         </main>
     </div>

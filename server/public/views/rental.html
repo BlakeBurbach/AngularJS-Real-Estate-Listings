@@ -1,62 +1,85 @@
-<section>
-        <h2>Rental Listings</h2>
-        <section>
-                <h3>Add Your Rental Listing</h3>
-                <div>
-                    <input type="number" ng-model="vm.newListing.cost" placeholder="Cost">
-                    <input type="number" ng-model="vm.newListing.sqft" placeholder="Square Feet">
-                    <select ng-model="vm.newListing.type">
-                            <option value="" disabled>Rental or Sale?</option>
-                            <option value="rent">Rent</option>
-                            <option value="sale">Sale</option>
-                    </select>
-                    <input type="text" ng-model="vm.newListing.city" placeholder="City">
-                    <button ng-click="vm.addListing(vm.newListing)">
-                        Add Listing
-                    </button>
+<section layout="row" flex>
+        <md-content>
+            <md-toolbar class="md-primary md-hue-1">
+                <div layout="row" flex layout-align="center center">
+                    <h2>Rental Listings</h2>
                 </div>
-            </section>
-      <table>
-          <thead>
-              <tr>
-                  <th>
-                      Cost
-                  </th>
-                  <th>
-                      Square Feet
-                  </th>
-                  <th>
-                      Type
-                  </th>
-                  <th>
-                      City
-                  </th>
-                  <th>
-                      Remove 
-                  </th>
-              </tr>
-          </thead>
-          <tbody ng-repeat="listing in vm.allListings.list 
-                            | filter: {type: 'rent'}">
-                <tr>
-                    <td>
-                        {{listing.cost}}
-                    </td>
-                    <td>
+            </md-toolbar>
+        <section>
+            <div layout="row" flex layout-align="center center">
+                <h3>Add a Rental Listing</h3>
+            </div>
+            <div class="inputDiv" layout="row" flex>
+                <md-input-container class="md-accent md-hue-1">
+                    <input type="number" ng-model="vm.newListing.cost" placeholder="Cost">
+                </md-input-container>
+                <md-input-container class="md-accent md-hue-1">
+                    <input type="number" ng-model="vm.newListing.sqft" placeholder="Square Feet">
+                </md-input-container>
+                <md-input-container class="md-block" class="md-accent md-hue-1" flex-gt-sm>
+                    <md-select ng-model="vm.newListing.type" class="md-accent md-hue-1">
+                        <label>Rental or Sale?</label>
+                        <md-option value="rent" class="md-accent md-hue-1">
+                            Rent
+                        </md-option>
+                        <md-option value="sale" class="md-accent md-hue-1">
+                            Sale
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-accent md-hue-1">
+                    <input type="text" ng-model="vm.newListing.city" placeholder="City">
+                </md-input-container>
+                    <md-button ng-click="vm.addListing(vm.newListing)"
+                               class="md-accent md-hue-2">
+                        Add Listing
+                    </md-button>
+                </md-input-container>
+            </div>
+        </section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Cost
+                        </th>
+                        <th>
+                            Square Feet
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            City
+                        </th>
+                        <th>
+                            Remove
+                        </th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="listing in vm.allListings.list
+                                | filter: {type: 'rent'} ">
+                    <tr>
+                        <td>
+                            ${{listing.cost}}
+                        </td>
+                        <td>
                         {{listing.sqft}}
-                    </td>
-                    <td>
-                        {{listing.type}}
-                    </td>
-                    <td>
-                        {{listing.city}}
-                    </td>
-                    <td>
-                        <button ng-click="vm.removeListing(listing)">
-                            Remove Listing
-                        </button>
-                    </td>
-                </tr>
-          </tbody>
-      </table>
+                        </td>
+                        <td>
+                            {{listing.type}}al
+                        </td>
+                        <td>
+                            {{listing.city}}
+                        </td>
+                        <td>
+                            <md-button ng-click="vm.removeListing(listing)"
+                                        class="md-raised md-warn md-hue-3">
+                                Remove Listing
+                            </md-button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-content>
     </section>
