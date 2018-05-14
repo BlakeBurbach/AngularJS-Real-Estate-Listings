@@ -1,5 +1,14 @@
-A Real Estate App that lists Sale and Rental listings in the greater Minnesota area.
+# AngularJS Real Estate Listings Code Challenge
+This app was built for a code challenge for Prime Academy. The app is pretty simple in functionality with letting a user add either a rental or sales listing and the ability to remove any listing. 
 
-Included is an inviting UI that allows any user to see the listings, and if they so wish, to add a rental or for sale listing.
+![Main Page](images/Real Estate.png)
 
-The database I used is called "listings" not hadar. The table used is also called, "listings".
+## Tech Used
+* AngularJS
+* Node.js
+* Express.js
+* PostgreSQL
+* AngularJS Material-Design
+
+### Stretch Goals
+* Give the user the ability to upload a picture with the listing
